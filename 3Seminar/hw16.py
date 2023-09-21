@@ -8,15 +8,20 @@
 # 3
 # -> 1
 
-import array
-import random
+import numpy
 
-N = int(input("Введите количество элементов массива"))
-A = array(N)
+N = int(input("Введите количество элементов массива: "))
+A = numpy.random.randint(0, N, N+1) #Создается массив по кол-ву элементов
+x = int(input("Введите число: "))
+print(A)
+count = 0
 
-for i in range(A, N):
-   x = int(input("Введите число: "))
-   random.int(0, N)
-   print(*A)
+if x not in A:
+      print('Числа нет!!!')
+
+for i in A:
+   if x == i:
+      count += 1
+print(f"Ваше число встречается {count} раз")
    
     
